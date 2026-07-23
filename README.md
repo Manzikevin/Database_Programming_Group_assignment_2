@@ -24,7 +24,7 @@ As a member of this project, I contributed by:
 | 2 | **[Kipling Bowier]** | `[30713/2025]` | DML Audit Triggers (`ALLOWANCES`, `ATTENDANCE`, `COUNTRIES`) |
 | 3 | **Kula C.Y Massally** | `30884/2025` | DML Audit Triggers (`DEPARTMENTS`, `EMPLOYEES`, `ROLES`) |
 | 4 | **[John Bondo]** | `[33365/2025]` | Stored Procedures (`sp_update_allowance`, `sp_delete_allowance`) & Error Handling |
-| 5 | **[Member Name 5]** | `[REG-NUMBER-05]` | Test Suite Execution, Validation & Query Verification |
+| 5 | **[Joshua s Karbar]** | `[31386/2025]` | Test Suite Execution, Validation & Query Verification |
 
 ---
 
