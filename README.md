@@ -11,7 +11,7 @@ This project implements a production-grade database auditing and error handling 
 |:---:|:---|:---:|:---|
 | 1 | **Manzi Irakoze Kevin** | `33205/2025` | Audit & Error Log Schema Design |
 | 2 | **[Kipling Bowier]** | `[30713/2025]` | DML Audit Triggers (`ALLOWANCES`, `ATTENDANCE`, `COUNTRIES`) |
-| 3 | **[Member Name 3]** | `[REG-NUMBER-03]` | DML Audit Triggers (`DEPARTMENTS`, `EMPLOYEES`, `ROLES`) |
+| 3 | **[Kula C.Y Massally]** | `[30884/2025]` | DML Audit Triggers (`DEPARTMENTS`, `EMPLOYEES`, `ROLES`) |
 | 4 | **[Member Name 4]** | `[REG-NUMBER-04]` | Stored Procedures (`sp_update_allowance`, `sp_delete_allowance`) & Error Handling |
 | 5 | **[Member Name 5]** | `[REG-NUMBER-05]` | Test Suite Execution, Validation & Query Verification |
 
