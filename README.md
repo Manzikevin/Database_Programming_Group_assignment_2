@@ -1,22 +1,11 @@
-## 👨‍💻 My Contribution
+# Database Auditing & Logging System with PL/SQL
 
-As a member of this project, I contributed by:
+## Project Overview
+This project implements a production-grade database auditing and error handling system using **Oracle 21c PL/SQL**. Designed for a core banking application, the system automatically records all Data Manipulation Language (DML) operations (`INSERT`, `UPDATE`, `DELETE`) across critical database tables to ensure accountability, data integrity, and compliance. Additionally, it features standardized stored procedures with robust exception handling and dedicated error logging.
 
-- Creating the `AUDIT` table to store database audit logs.
-- Creating the `ERROR_LOG` table for exception logging.
-- Developing PL/SQL triggers for INSERT, UPDATE, and DELETE operations.
-- Writing stored procedures to update and delete allowance records.
-- Implementing exception handling and automatic error logging.
-- Testing all database operations to verify the auditing system.
-- Writing clean, well-commented Oracle SQL/PLSQL code.
+---
 
-### Technologies Used
-- Oracle SQL
-- Oracle PL/SQL
-- Database Triggers
-- Stored Procedures
-- Exception Handling
-- Git & GitHub
+## Group Members & Work Submission
 
 | No. | Full Name | Registration Number | Role / Contribution |
 |:---:|:---|:---:|:---|
