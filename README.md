@@ -20,24 +20,24 @@ This project implements a production-grade database auditing and error handling 
 ## System Architecture & Technical Tasks
 
 ### Task 1: Audit Table & Error Log Table
-* [cite_start]**`dml_audit_log`**: Unified audit table tracking the operation type (`INSERT`, `UPDATE`, `DELETE`), target object (`object_name`), connected database user (`operation_user`), execution timestamp, and snapshots of pre/post-operation record data (`old_data`, `new_data`) stored as `CLOB`.
-* [cite_start]**`error_log`**: Dedicated repository for runtime exceptions capturing the procedure name, Oracle error message (`SQLERRM`), SQL error code (`SQLCODE`), and error timestamp.
+* **`dml_audit_log`**: Unified audit table tracking the operation type (`INSERT`, `UPDATE`, `DELETE`), target object (`object_name`), connected database user (`operation_user`), execution timestamp, and snapshots of pre/post-operation record data (`old_data`, `new_data`) stored as `CLOB`.
+* **`error_log`**: Dedicated repository for runtime exceptions capturing the procedure name, Oracle error message (`SQLERRM`), SQL error code (`SQLCODE`), and error timestamp.
 
 ### Task 2: DML Audit Triggers
-[cite_start]Row-level `AFTER INSERT OR UPDATE OR DELETE` triggers configured across 6 audited banking entities:
-* [cite_start]`trg_audit_allowances` (`ALLOWANCES`) 
+[Row-level `AFTER INSERT OR UPDATE OR DELETE` triggers configured across 6 audited banking entities:
+* `trg_audit_allowances` (`ALLOWANCES`) 
 * `trg_audit_attendance` (`ATTENDANCE`) 
-* [cite_start]`trg_audit_countries` (`COUNTRIES`) 
-* [cite_start]`trg_audit_departments` (`DEPARTMENTS`) 
+* `trg_audit_countries` (`COUNTRIES`) 
+* `trg_audit_departments` (`DEPARTMENTS`) 
 * `trg_audit_employees` (`EMPLOYEES`) 
-* [cite_start]`trg_audit_roles` (`ROLES`) 
+* `trg_audit_roles` (`ROLES`) 
 
 ### Task 3: Stored Procedures & Exception Handling
-* [cite_start]**`sp_update_allowance`**: Updates record values, checks row modification via `SQL%NOTFOUND`, handles non-existent IDs with custom exceptions, and logs errors into `error_log` without crashing the application.
-* [cite_start]**`sp_delete_allowance`**: Performs safe record deletion with explicit transaction control (`COMMIT` / `ROLLBACK`) and automatic error logging.
+* **`sp_update_allowance`**: Updates record values, checks row modification via `SQL%NOTFOUND`, handles non-existent IDs with custom exceptions, and logs errors into `error_log` without crashing the application.
+* **`sp_delete_allowance`**: Performs safe record deletion with explicit transaction control (`COMMIT` / `ROLLBACK`) and automatic error logging.
 
 ### Task 4: Testing & Verification Suite
-[cite_start]Comprehensive test script running automated `INSERT`, `UPDATE`, and `DELETE` operations alongside intentionally failing transactions (e.g., updating non-existent records) to prove exception capture and log generation. [cite: 112]
+Comprehensive test script running automated `INSERT`, `UPDATE`, and `DELETE` operations alongside intentionally failing transactions (e.g., updating non-existent records) to prove exception capture and log generation.
 
 ---
 
